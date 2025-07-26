@@ -337,7 +337,7 @@ def update_game_state():
 
 def draw():
     """ Desenha os elementos na tela. """
-    global screen, game_state
+    global screen, game_state, sounds_mute
     
     if game_state == 'menu':
         screen.blit('menu', (0, 0))
@@ -348,6 +348,7 @@ def draw():
         screen.blit('game_won', (0, 0))
     elif game_state == 'over':
         screen.blit('game_over', (0, 0))
+        sounds_mute = True
     else:
     
         background.draw()
